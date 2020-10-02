@@ -1,0 +1,138 @@
+
+
+@media screen and (min-width: 1000px){
+    /*共通設定*/
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    /*共通設定*/
+
+    html{
+        height: 100%;
+    }
+    body{
+        height:100%;
+    }
+    main{
+        height:100%;
+        background-color: white;
+    }
+    main > div{
+        display: grid;
+        grid-template-columns: repeat(10, minmax(0, calc(100% / 10)));
+        grid-template-rows: repeat(10, minmax(0, calc(100% / 10)));
+        height:100%;
+        padding: 20px;
+        margin: 50px;
+        background-color: orangered;
+    }
+
+    .hello{
+        font-size: 200px;
+        color: palegreen;
+        grid-column: 2 / 8 ;
+        grid-row: 2 / 3;
+        font: bold;
+    }
+
+    .intro{
+        font-size: 39px;
+        color: rebeccapurple;
+        grid-column: 7 / 10;
+        grid-row: 7 / 8;
+    }
+
+    .blah{
+        font-size: 15px;
+        color: purple;
+        grid-column: 7 / 10;
+        grid-row: 8 / 10;
+        font-style: italic;
+    }
+
+    .mockingjay{
+        grid-column: 2 / 6;
+        grid-row: 7 / 11;
+    }
+
+    figure{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    /*共通設定*/
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    /*共通設定*/
+
+    html{
+        height: 100%;
+    }
+    body{
+        height:100%;
+    }
+    main{
+        height:100%;
+        background-color: white;
+    }
+    main > div{
+        display: grid;
+        grid-template-columns: repeat(10, minmax(0, calc(100% / 10)));
+        grid-template-rows: repeat(10, minmax(0, calc(100% / 10)));
+        height:100%;
+        padding: 20px;
+        margin: 50px;
+        background-color: orangered;
+    }
+
+    .hello{
+        font-size: 100px;
+        color: palegreen;
+        grid-column: 2 / 8 ;
+        grid-row: 1 / 2;
+        font: bold;
+    }
+
+    .intro{
+        font-size: 39px;
+        color: rebeccapurple;
+        grid-column: 1 / 10;
+        grid-row: 8 / 9;
+    }
+
+    .blah{
+        font-size: 15px;
+        color: purple;
+        grid-column: 1 / 10;
+        grid-row: 9 / 11;
+        font-style: italic;
+    }
+
+    .mockingjay{
+        grid-column: 1 / 10;
+        grid-row: 3 / 8;
+    }
+
+    figure{
+        padding: 10px;
+    }
+}
+
