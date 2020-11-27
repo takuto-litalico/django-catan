@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランキング</title>
+</head>
+<body>
+    <main>
+        {% csrf_token %}
+        <table>
+            <thead>
+                <tr>
+                    <th><p>名前</p></th>
+                    <th><p>出場回数</p></th>
+                </tr>
+            </thead>
+        <tbody>
+        {% for p in players %}
+                <tr>
+                    <td><p>{{p.name}}</p></td>
+                    <td><p style="text-align: center">{{p.entry_num}}</p></td>
+                </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th><p>名前</p></th>
+                    <th><p>ポイント獲得数</p></th>
+                </tr>
+            </thead>
+        <tbody>
+        {% for p in order_by_points_gained %}
+                <tr>
+                    <td><p>{{p.name}}</p></td>
+                    <td><p style="text-align: center">{{p.points_gained}}</p></td>
+                </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </main>
+</body>
+</html>

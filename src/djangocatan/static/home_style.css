@@ -1,0 +1,28 @@
+@media screen{
+    /*共通設定*/
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    /*共通設定*/
+
+    html{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, calc(100% / 12)));
+        grid-template-rows: repeat(12, minmax(0, calc(100% / 12)));
+        background-color: lightblue;
+    }
+}
+.top{
+    grid-row: 1 / 10;
+    grid-column: 1 / 10;
+    font-size: 50px;
+    color: blue;
+}

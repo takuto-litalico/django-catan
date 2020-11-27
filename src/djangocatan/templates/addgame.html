@@ -1,20 +1,38 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="Ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ゲーム追加</title>
 </head>
 <body>
     <main>
-        <forms>
-            <label>入力せいや：
-                <input type="text" name="haha">
-            </label>
-            <label>
-                <input type="submit">
-            </label>
-        </forms>
+        <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <table>
+            <tr>
+                <td><p style="text-align: center;">場所：</p></td>
+                <td><input type="text" name="location"></td>
+            </tr>
+            <tr>
+                <td><p>１位から順に入力</p></td>
+            </tr>
+        </table>
+        {% for i in range %}
+        <table>
+            <tr>
+                <td><p>名前：</p></td>
+                <td><input type="text" name="name_{{i}}"></td>
+                <td><p>得点：</p></td>
+                <td><input type="number" name="score_{{i}}"></td>
+            </tr>
+        </table>
+        {% endfor %}
+        <button type="submit">完了</button>
+        </form>
     </main>
 </body>
 </html>
