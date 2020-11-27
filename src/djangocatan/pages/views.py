@@ -32,7 +32,7 @@ def create_rank():
     ts_dict = {}
     as_dict = {}
     dict_list = [en_dict, pg_dict, tw_dict, wr_dict, ts_dict, as_dict]
-    for pl in Player.objects.all():
+    for pl in players:
         name = pl.name
         info = pl.player_info
         i = 0
